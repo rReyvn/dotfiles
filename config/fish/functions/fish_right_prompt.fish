@@ -154,7 +154,7 @@ function fish_right_prompt
         echo -n ' '(set_color yellow)'═'
     end
     if test $status_untracked -ne 0
-        echo -n ' '(set_color white)'◼'
+        echo -n ' '(set_color white)'?'
     end
 
     set_color normal
