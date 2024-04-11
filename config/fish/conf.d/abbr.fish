@@ -1,0 +1,6 @@
+abbr lg 'lazygit'
+abbr ga 'git add'
+abbr gc 'git commit -m'
+abbr gp 'git push'
+abbr gpl 'git pull'
+abbr gs 'git status'
