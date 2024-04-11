@@ -32,18 +32,17 @@ return {
 			{ "<leader>ti", ":IBLToggle<CR>", { desc = "[T]oggle [I]ndent Line", silent = true } },
 		},
 		config = function()
-			local hooks = require("ibl.hooks")
-
 			require("ibl").setup({
+				indent = {
+					char = "┊",
+				},
+				whitespace = {
+					remove_blankline_trail = false,
+				},
 				scope = {
-					show_start = false,
-					show_end = false,
+					enabled = false,
 				},
 			})
-
-			-- Disable first level indentation line
-			hooks.register(hooks.type.WHITESPACE, hooks.builtin.hide_first_space_indent_level)
-			hooks.register(hooks.type.WHITESPACE, hooks.builtin.hide_first_tab_indent_level)
 		end,
 	},
 	{
@@ -81,4 +80,9 @@ return {
       ]])
 		end,
 	},
+	-- NOTE : Notification UI
+	-- {
+	-- 	"j-hui/fidget.nvim",
+	-- 	opts = {},
+	-- },
 }

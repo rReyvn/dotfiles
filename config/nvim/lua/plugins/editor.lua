@@ -99,7 +99,15 @@ return {
 	},
 	{
 		"windwp/nvim-ts-autotag",
-		event = { "BufReadPre", "BufNewFile" },
+		ft = {
+			"html",
+			"js",
+			"ts",
+			"php",
+			"md",
+			"xml",
+		},
+		-- event = { "BufReadPre", "BufNewFile" },
 		opts = {},
 	},
 	{
