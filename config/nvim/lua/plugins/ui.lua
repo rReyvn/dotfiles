@@ -29,15 +29,17 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		main = "ibl",
 		keys = {
-			{ "<leader>ti", ":IBLToggle<CR>", { desc = "[T]oggle [I]ndent Line", silent = true } },
+			{
+				"<leader>ti",
+				":IBLToggle<CR>",
+				desc = "[T]oggle Indent Blankline",
+				silent = true,
+			},
 		},
 		config = function()
 			require("ibl").setup({
 				indent = {
 					char = "┊",
-				},
-				whitespace = {
-					remove_blankline_trail = false,
 				},
 				scope = {
 					enabled = false,
@@ -79,6 +81,29 @@ return {
         autocmd FileType alpha setlocal nofoldenable
       ]])
 		end,
+	},
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		opts = {},
+		init = function()
+			vim.o.timeout = true
+			vim.o.timeoutlen = 300
+		end,
+	},
+	{
+		"NvChad/nvim-colorizer.lua",
+		keys = {
+			{
+				"<leader>tc",
+				":ColorizerToggle<CR>",
+				desc = "[T]oggle Colorizer",
+				silent = true,
+			},
+		},
+		opts = {
+			-- user_default_options = { mode = "virtualtext" },
+		},
 	},
 	-- NOTE : Notification UI
 	-- {

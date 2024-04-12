@@ -12,15 +12,6 @@ return {
 		end,
 	},
 	{
-		"folke/which-key.nvim",
-		event = "VeryLazy",
-		opts = {},
-		init = function()
-			vim.o.timeout = true
-			vim.o.timeoutlen = 300
-		end,
-	},
-	{
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		config = function()
@@ -51,14 +42,6 @@ return {
 	{
 		"numToStr/Comment.nvim",
 		event = { "BufReadPre", "BufNewFile" },
-		keys = {
-			{ "gcc", mode = "n", desc = "Comment toggle current line" },
-			{ "gc", mode = { "n", "o" }, desc = "Comment toggle linewise" },
-			{ "gc", mode = "x", desc = "Comment toggle linewise (visual)" },
-			{ "gbc", mode = "n", desc = "Comment toggle current block" },
-			{ "gb", mode = { "n", "o" }, desc = "Comment toggle blockwise" },
-			{ "gb", mode = "x", desc = "Comment toggle blockwise (visual)" },
-		},
 		opts = {},
 	},
 	{
@@ -168,8 +151,6 @@ return {
 			vim.keymap.set("n", "<leader>s.", builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
 			vim.keymap.set("n", "<leader><leader>", builtin.buffers, { desc = "[ ] Find existing buffers" })
 
-			vim.keymap.set("n", "<leader>wl", "<Cmd>Telescope workspaces<CR>", { desc = "[W]orkspaces [L]ist" })
-
 			vim.keymap.set("n", "<leader>/", function()
 				builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown({
 					winblend = 10,
@@ -188,14 +169,5 @@ return {
 				builtin.find_files({ cwd = vim.fn.stdpath("config") })
 			end, { desc = "[S]earch [N]eovim files" })
 		end,
-	},
-	{
-		"NvChad/nvim-colorizer.lua",
-		keys = {
-			{ "<leader>tc", ":ColorizerToggle<CR>", { desc = "[T]oggle [C]olorizer", silent = true } },
-		},
-		opts = {
-			-- user_default_options = { mode = "virtualtext" },
-		},
 	},
 }
