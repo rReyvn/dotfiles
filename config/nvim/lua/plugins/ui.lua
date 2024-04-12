@@ -10,6 +10,15 @@ return {
 				configuration.colors_override
 			)
 
+			local conditions = {
+				buffer_not_empty = function()
+					return vim.fn.empty(vim.fn.expand("%:t")) ~= 1
+				end,
+				hide_in_width = function()
+					return vim.fn.winwidth(0) > 75
+				end,
+			}
+
 			require("lualine").setup({
 				theme = "gruvbox-material",
 				options = {
@@ -29,7 +38,7 @@ return {
 							function()
 								return "▊"
 							end,
-							color = { fg = palette.grey2[1] },
+							color = { fg = palette.yellow[1] },
 							padding = { right = 1 },
 						},
 						{
@@ -39,16 +48,32 @@ return {
 							"mode",
 							padding = { right = 1 },
 						},
-						"filename",
+						{
+							"filename",
+							cond = conditions.buffer_not_empty,
+						},
 						"diagnostics",
 					},
 					lualine_x = {
-						"branch",
-						"diff",
-						"encoding",
+						{
+							"branch",
+							icon = "",
+							cond = conditions.hide_in_width,
+						},
+						{
+							"diff",
+							cond = conditions.hide_in_width,
+						},
+						{
+							"encoding",
+							cond = conditions.hide_in_width,
+							fmt = string.upper,
+						},
 						{
 							"filetype",
+							cond = conditions.hide_in_width,
 							icons_enabled = false,
+							fmt = string.upper,
 						},
 						{
 							"location",
@@ -58,7 +83,7 @@ return {
 							function()
 								return "▊"
 							end,
-							color = { fg = palette.grey2[1] },
+							color = { fg = palette.yellow[1] },
 							padding = { left = 1 },
 						},
 					},
