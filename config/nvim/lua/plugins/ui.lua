@@ -2,28 +2,69 @@ return {
 	{
 		"nvim-lualine/lualine.nvim",
 		event = "VeryLazy",
-		opts = {
-			theme = "gruvbox-material",
-			options = {
-				component_separators = { left = "", right = "" },
-				section_separators = { left = "", right = "" },
-			},
-			sections = {
-				lualine_a = {
-					{
-						"mode",
-						separator = { left = "", right = "" },
+		config = function()
+			local configuration = vim.fn["gruvbox_material#get_configuration"]()
+			local palette = vim.fn["gruvbox_material#get_palette"](
+				configuration.background,
+				configuration.foreground,
+				configuration.colors_override
+			)
+
+			require("lualine").setup({
+				theme = "gruvbox-material",
+				options = {
+					component_separators = { left = "", right = "" },
+					section_separators = { left = "", right = "" },
+					-- Single Statusline instead one per every window
+					-- globalstatus = true,
+				},
+				sections = {
+					lualine_a = {},
+					lualine_b = {},
+					lualine_y = {},
+					lualine_z = {},
+					-- Filled Area
+					lualine_c = {
+						{
+							function()
+								return "▊"
+							end,
+							color = { fg = palette.grey2[1] },
+							padding = { right = 1 },
+						},
+						{
+							-- function()
+							-- 	return "󰫢"
+							-- end,
+							"mode",
+							padding = { right = 1 },
+						},
+						"filename",
+						"diagnostics",
+					},
+					lualine_x = {
+						"branch",
+						"diff",
+						"encoding",
+						{
+							"filetype",
+							icons_enabled = false,
+						},
+						{
+							"location",
+							padding = 0,
+						},
+						{
+							function()
+								return "▊"
+							end,
+							color = { fg = palette.grey2[1] },
+							padding = { left = 1 },
+						},
 					},
 				},
-				lualine_x = { "encoding", "filetype" },
-				lualine_z = {
-					{
-						"location",
-						separator = { left = "", right = "" },
-					},
-				},
-			},
-		},
+			})
+		end,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
@@ -32,7 +73,7 @@ return {
 			{
 				"<leader>ti",
 				":IBLToggle<CR>",
-				desc = "[T]oggle Indent Blankline",
+				desc = "[T]oggle [I]ndent Blankline",
 				silent = true,
 			},
 		},
@@ -97,7 +138,7 @@ return {
 			{
 				"<leader>tc",
 				":ColorizerToggle<CR>",
-				desc = "[T]oggle Colorizer",
+				desc = "[T]oggle [C]olorizer",
 				silent = true,
 			},
 		},
