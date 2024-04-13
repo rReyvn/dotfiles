@@ -104,6 +104,7 @@ return {
 		},
 		config = function()
 			require("ibl").setup({
+				enabled = false,
 				indent = {
 					char = "┊",
 				},

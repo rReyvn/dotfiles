@@ -1,8 +1,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-vim.g.netrw_banner = true
+vim.g.netrw_banner = false
 vim.g.netrw_winsize = 15
+vim.g.netrw_keepdir = 0 -- Sync current dir and browsing dir
 
 vim.opt.autoindent = true
 vim.opt.breakindent = true
