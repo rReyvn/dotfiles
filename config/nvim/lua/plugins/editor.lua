@@ -125,6 +125,9 @@ return {
 		},
 		config = function()
 			require("telescope").setup({
+				defaults = {
+					layout_strategy = "flex",
+				},
 				extensions = {
 					["ui-select"] = {
 						require("telescope.themes").get_dropdown(),
