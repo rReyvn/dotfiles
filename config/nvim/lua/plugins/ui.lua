@@ -3,6 +3,7 @@ return {
 		"nvim-lualine/lualine.nvim",
 		event = "VeryLazy",
 		config = function()
+			local lualine = require("lualine")
 			local configuration = vim.fn["gruvbox_material#get_configuration"]()
 			local palette = vim.fn["gruvbox_material#get_palette"](
 				configuration.background,
@@ -19,76 +20,100 @@ return {
 				end,
 			}
 
-			require("lualine").setup({
+			local config = {
 				theme = "gruvbox-material",
 				options = {
 					component_separators = { left = "", right = "" },
 					section_separators = { left = "", right = "" },
 					-- Single Statusline instead one per every window
-					-- globalstatus = true,
+					globalstatus = true,
 				},
 				sections = {
 					lualine_a = {},
 					lualine_b = {},
 					lualine_y = {},
 					lualine_z = {},
-					-- Filled Area
-					lualine_c = {
-						{
-							function()
-								return "▊"
-							end,
-							color = { fg = palette.yellow[1] },
-							padding = { right = 1 },
-						},
-						{
-							-- function()
-							-- 	return "󰫢"
-							-- end,
-							"mode",
-							padding = { right = 1 },
-						},
-						{
-							"filename",
-							cond = conditions.buffer_not_empty,
-						},
-						"diagnostics",
-					},
-					lualine_x = {
-						{
-							"branch",
-							icon = "",
-							cond = conditions.hide_in_width,
-						},
-						{
-							"diff",
-							cond = conditions.hide_in_width,
-						},
-						{
-							"encoding",
-							cond = conditions.hide_in_width,
-							fmt = string.upper,
-						},
-						{
-							"filetype",
-							cond = conditions.hide_in_width,
-							icons_enabled = false,
-							fmt = string.upper,
-						},
-						{
-							"location",
-							padding = 0,
-						},
-						{
-							function()
-								return "▊"
-							end,
-							color = { fg = palette.yellow[1] },
-							padding = { left = 1 },
-						},
-					},
+					lualine_c = {},
+					lualine_x = {},
 				},
+				inactive_sections = {
+					lualine_a = {},
+					lualine_b = {},
+					lualine_y = {},
+					lualine_z = {},
+					lualine_c = {},
+					lualine_x = {},
+				},
+			}
+
+			local function ins_left(component)
+				table.insert(config.sections.lualine_c, component)
+			end
+
+			local function ins_right(component)
+				table.insert(config.sections.lualine_x, component)
+			end
+
+			ins_left({
+				function()
+					return "▊"
+				end,
+				color = { fg = palette.yellow[1] },
+				padding = { right = 1 },
 			})
+
+			ins_left({
+				"mode",
+				padding = { right = 1 },
+			})
+
+			ins_left({
+				"filename",
+				cond = conditions.buffer_not_empty,
+			})
+
+			ins_left({
+				"diagnostics",
+			})
+
+			ins_right({
+				"location",
+			})
+
+			ins_right({
+				"branch",
+				icon = "",
+				cond = conditions.hide_in_width,
+			})
+
+			ins_right({
+				"diff",
+				cond = conditions.hide_in_width,
+			})
+
+			ins_right({
+				"encoding",
+				cond = conditions.hide_in_width,
+				fmt = string.upper,
+			})
+
+			ins_right({
+				"filetype",
+				cond = conditions.hide_in_width,
+				icons_enabled = false,
+				fmt = string.upper,
+				padding = { left = 1 },
+			})
+
+			ins_right({
+				function()
+					return "▊"
+				end,
+				color = { fg = palette.yellow[1] },
+				padding = { left = 1 },
+			})
+
+			lualine.setup(config)
 		end,
 	},
 	{
