@@ -24,5 +24,3 @@ vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { silent = true })
 -- Buffer Movement
 vim.keymap.set("n", "<leader><Tab>", ":bnext<CR>", { desc = "Go to next buffer", silent = true })
 vim.keymap.set("n", "<leader><S-Tab>", ":bprevious<CR>", { desc = "Go to previous buffer", silent = true })
-vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete buffer", silent = true })
-vim.keymap.set("n", "<leader>bw", ":bwipeout<CR>", { desc = "Wipeout buffer", silent = true })

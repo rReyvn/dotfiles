@@ -126,7 +126,24 @@ return {
 		config = function()
 			require("telescope").setup({
 				defaults = {
+					mappings = {
+						n = {
+							["<C-c>"] = require("telescope.actions").close,
+						},
+					},
 					layout_strategy = "flex",
+				},
+				pickers = {
+					buffers = {
+						mappings = {
+							n = {
+								["<M-d>"] = require("telescope.actions").delete_buffer,
+							},
+							i = {
+								["<M-d>"] = require("telescope.actions").delete_buffer,
+							},
+						},
+					},
 				},
 				extensions = {
 					["ui-select"] = {

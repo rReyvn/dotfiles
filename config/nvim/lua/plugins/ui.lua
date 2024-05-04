@@ -124,7 +124,6 @@ return {
 				"<leader>ti",
 				":IBLToggle<CR>",
 				desc = "[T]oggle [I]ndent Blankline",
-				silent = true,
 			},
 		},
 		config = function()
@@ -190,7 +189,6 @@ return {
 				"<leader>tc",
 				":ColorizerToggle<CR>",
 				desc = "[T]oggle [C]olorizer",
-				silent = true,
 			},
 		},
 		opts = {
