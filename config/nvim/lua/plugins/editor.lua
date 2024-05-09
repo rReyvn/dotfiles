@@ -81,19 +81,6 @@ return {
 		end,
 	},
 	{
-		"windwp/nvim-ts-autotag",
-		ft = {
-			"html",
-			"js",
-			"ts",
-			"php",
-			"md",
-			"xml",
-		},
-		-- event = { "BufReadPre", "BufNewFile" },
-		opts = {},
-	},
-	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()

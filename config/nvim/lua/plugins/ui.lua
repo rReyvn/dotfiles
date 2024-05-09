@@ -182,19 +182,6 @@ return {
 			vim.o.timeoutlen = 300
 		end,
 	},
-	{
-		"NvChad/nvim-colorizer.lua",
-		keys = {
-			{
-				"<leader>tc",
-				":ColorizerToggle<CR>",
-				desc = "[T]oggle [C]olorizer",
-			},
-		},
-		opts = {
-			-- user_default_options = { mode = "virtualtext" },
-		},
-	},
 	-- NOTE : Notification UI
 	-- {
 	-- 	"j-hui/fidget.nvim",
