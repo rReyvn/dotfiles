@@ -2,9 +2,9 @@
 vim.keymap.set("n", "-", ":Explore<CR>", { desc = "File Browser", silent = true })
 
 -- Yank Remap
-vim.keymap.set("n", "<leader>yall", ":%y+<CR>", { desc = "[Y]ank [A]ll" })
--- vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to system clipboard" })
--- vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank line to system clipboard" })
+vim.keymap.set("n", "<leader>by", ":%y+<CR>", { desc = "[B]uffer [Y]ank all" })
+-- vim.keymap.set({ "n", "v" }, "<leader>bc", '"+y', { desc = "Yank to system clipboard" })
+-- vim.keymap.set("n", "<leader>bY", '"+Y', { desc = "Yank line to system clipboard" })
 
 -- Don't yank replaced text
 vim.keymap.set("x", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', { silent = true })

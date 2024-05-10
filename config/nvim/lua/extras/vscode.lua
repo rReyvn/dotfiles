@@ -6,9 +6,9 @@ vim.opt.clipboard = "unnamedplus"
 
 -- [ Keymap ]
 -- Yank Remap
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Yank to system clipboard" })
-vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank line to system clipboard" })
-vim.keymap.set("n", "<leader>yall", "<Cmd>%y+<CR>", { desc = "[Y]ank [A]ll" })
+-- vim.keymap.set({ "n", "v" }, "<leader>bc", '"+y', { desc = "Yank to system clipboard" })
+-- vim.keymap.set("n", "<leader>bY", '"+Y', { desc = "Yank line to system clipboard" })
+vim.keymap.set("n", "<leader>by", "<Cmd>%y+<CR>", { desc = "[Y]ank [A]ll" })
 -- Don't yank replaced text
 vim.keymap.set("x", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', {})
 

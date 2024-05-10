@@ -99,8 +99,8 @@ return {
 
 			ins_right({
 				"filetype",
-				cond = conditions.hide_in_width,
 				icons_enabled = false,
+				cond = conditions.buffer_not_empty,
 				fmt = string.upper,
 				padding = { left = 1 },
 			})
@@ -160,8 +160,12 @@ return {
 				dashboard.button("f", "󰈞  > Find File", ":Telescope find_files<CR>"),
 				dashboard.button("l", "󰆓  > Load Session", ":SessionManager load_current_dir_session<CR>"),
 				dashboard.button("L", "󰆓  > List Session", ":SessionManager load_session<CR>"),
-				dashboard.button("o", "󰉓  > Open Workspace", ":WorkspacesOpen<CR>"),
-				dashboard.button("s", "  > Settings", ":e $MYVIMRC | :cd %:p:h | pwd<CR>"),
+				dashboard.button(
+					"n",
+					"  > Find Notes",
+					":Telescope find_files cwd=/home/reyvn/Dev/Notes/ReyVault/<CR>"
+				),
+				dashboard.button("o", "󱁽  > Open Workspace", ":WorkspacesOpen<CR>"),
 				dashboard.button("q", "󰿅  > Quit", ":qa<CR>"),
 			}
 
@@ -193,6 +197,7 @@ return {
 				["<leader>b"] = { name = "+Buffer" },
 				["<leader>t"] = { name = "+Toggle" },
 				["<leader>g"] = { name = "+Git" },
+				["<leader>w"] = { name = "+Workspace" },
 				["<leader>s"] = { name = "+Search" },
 				["<leader>S"] = { name = "+Session" },
 			})
