@@ -14,9 +14,19 @@ return {
 				autosave_last_session = false,
 			})
 
-			vim.keymap.set("n", "<leader>sma", ":SessionManager available_commands<CR>")
-			vim.keymap.set("n", "<leader>sml", ":SessionManager load_session<CR>")
-			vim.keymap.set("n", "<leader>sms", ":SessionManager save_current_session<CR>")
+			vim.keymap.set(
+				"n",
+				"<leader>Sa",
+				":SessionManager available_commands<CR>",
+				{ desc = "[S]ession [A]vailable commands" }
+			)
+			vim.keymap.set("n", "<leader>Sl", ":SessionManager load_session<CR>", { desc = "[S]ession [L]oad session" })
+			vim.keymap.set(
+				"n",
+				"<leader>Ss",
+				":SessionManager save_current_session<CR>",
+				{ desc = "[S]ession [S]ave Session" }
+			)
 		end,
 	},
 	{
@@ -125,11 +135,4 @@ return {
 			})
 		end,
 	},
-	-- NOTE : Tmux Pane Navigate
-	-- {
-	-- 	"aserowy/tmux.nvim",
-	-- 	config = function()
-	-- 		return require("tmux").setup()
-	-- 	end,
-	-- },
 }
