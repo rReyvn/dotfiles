@@ -18,6 +18,9 @@ local opts = {
 	install = {
 		colorscheme = { "gruvbox-material", "habamax" },
 	},
+	change_detection = {
+		notify = false,
+	},
 }
 
-require("lazy").setup("plugins", opts)
+require("lazy").setup("reyvn.plugins", opts)
