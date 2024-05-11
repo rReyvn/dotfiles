@@ -19,13 +19,13 @@ return {
 			dashboard.section.buttons.val = {
 				dashboard.button("e", "󰙅  > Explore", ":Explore<CR>"),
 				dashboard.button("f", "󰈞  > Find File", ":Telescope find_files<CR>"),
-				dashboard.button("l", "󰆓  > Load Session", ":SessionManager load_current_dir_session<CR>"),
-				dashboard.button("L", "󰆓  > List Session", ":SessionManager load_session<CR>"),
 				dashboard.button(
 					"n",
 					"  > Find Notes",
 					":Telescope find_files cwd=/home/reyvn/Dev/Notes/ReyVault/<CR>"
 				),
+				dashboard.button("l", "󰆓  > Load Session", ":SessionManager load_current_dir_session<CR>"),
+				dashboard.button("L", "󰆓  > List Session", ":SessionManager load_session<CR>"),
 				dashboard.button("o", "󱁽  > Open Workspace", ":WorkspacesOpen<CR>"),
 				dashboard.button("q", "󰿅  > Quit", ":qa<CR>"),
 			}

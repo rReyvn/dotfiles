@@ -9,7 +9,6 @@ return {
 				function()
 					require("conform").format({ async = true, lsp_fallback = true })
 				end,
-				mode = "",
 				desc = "Format buffer",
 			},
 		},
@@ -19,6 +18,7 @@ return {
 				lua = { "stylua" },
 				javascript = { { "prettierd", "prettier" } },
 				css = { { "prettierd", "prettier" } },
+				html = { { "prettierd", "prettier" } },
 				-- python = { "isort", "black" },
 				-- blade = { "blade_formatter" },
 			},
