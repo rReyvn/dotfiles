@@ -4,12 +4,8 @@ return {
 		event = "VeryLazy",
 		config = function()
 			local lualine = require("lualine")
-			local configuration = vim.fn["gruvbox_material#get_configuration"]()
-			local palette = vim.fn["gruvbox_material#get_palette"](
-				configuration.background,
-				configuration.foreground,
-				configuration.colors_override
-			)
+
+			local accent_color = "#d8a657"
 
 			local conditions = {
 				buffer_not_empty = function()
@@ -58,7 +54,7 @@ return {
 				function()
 					return "▊"
 				end,
-				color = { fg = palette.yellow[1] },
+				color = { fg = accent_color },
 				padding = { right = 1 },
 			})
 
@@ -109,7 +105,7 @@ return {
 				function()
 					return "▊"
 				end,
-				color = { fg = palette.yellow[1] },
+				color = { fg = accent_color },
 				padding = { left = 1 },
 			})
 

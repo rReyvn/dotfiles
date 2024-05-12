@@ -10,7 +10,6 @@ return {
 			"<tab>t",
 			":Grapple toggle<cr>",
 			desc = "Grapple toggle tag",
-			silent = true,
 		},
 		{
 			"<tab><tab>",
