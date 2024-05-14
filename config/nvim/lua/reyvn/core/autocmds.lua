@@ -75,3 +75,12 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 		vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
 	end,
 })
+
+-- Set conceallevel for markdown
+vim.api.nvim_create_autocmd({ "FileType" }, {
+	group = augroup("md_conceallevel"),
+	pattern = { "markdown" },
+	callback = function()
+		vim.opt_local.conceallevel = 2
+	end,
+})
