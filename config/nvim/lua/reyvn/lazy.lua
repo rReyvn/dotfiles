@@ -23,4 +23,4 @@ local opts = {
 	},
 }
 
-require("lazy").setup("reyvn.plugins", opts)
+require("lazy").setup({ import = "reyvn.plugins" }, opts)

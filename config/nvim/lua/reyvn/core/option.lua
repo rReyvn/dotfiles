@@ -19,6 +19,7 @@ vim.opt.nu = true
 vim.opt.rnu = true
 vim.opt.scroll = 8
 vim.opt.scrolloff = 10
+vim.opt.shell = "/usr/bin/fish"
 vim.opt.shiftwidth = 2
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
