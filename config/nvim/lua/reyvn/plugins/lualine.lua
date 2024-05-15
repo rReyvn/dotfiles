@@ -93,6 +93,17 @@ return {
 		})
 
 		ins_right({
+			"fileformat",
+			cond = conditions.hide_in_width,
+			icons_enabled = true,
+			symbols = {
+				unix = "LF",
+				dos = "CRLF",
+				mac = "CR",
+			},
+		})
+
+		ins_right({
 			"filetype",
 			icons_enabled = false,
 			cond = conditions.buffer_not_empty,
