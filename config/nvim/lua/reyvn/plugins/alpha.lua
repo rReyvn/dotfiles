@@ -19,7 +19,7 @@ return {
 		}
 		-- Set menu
 		dashboard.section.buttons.val = {
-			dashboard.button("e", "󰙅   Explore", ":Explore<CR>"),
+			dashboard.button("e", "󰙅   Explore", ":Oil<CR>"),
 			dashboard.button("f", "󰱽   Find File", ":Telescope find_files<CR>"),
 			dashboard.button("r", "󱈗   Recent File", ":Telescope oldfiles<CR>"),
 			dashboard.button(

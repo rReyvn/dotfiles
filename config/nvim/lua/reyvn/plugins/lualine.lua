@@ -69,12 +69,13 @@ return {
 
 		ins_left({
 			"diagnostics",
+			always_visible = false,
+			colored = true,
 		})
 
 		ins_right({
 			"location",
 		})
-
 		ins_right({
 			"branch",
 			icon = "",

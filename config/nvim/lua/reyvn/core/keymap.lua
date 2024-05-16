@@ -1,5 +1,5 @@
 -- File Browser
-vim.keymap.set("n", "-", ":Explore<CR>", { desc = "File Browser", silent = true })
+vim.keymap.set("n", "-", ":Oil<CR>", { desc = "File Explore", silent = true })
 
 -- Yank Remap
 vim.keymap.set("n", "<leader>by", ":%y+<CR>", { desc = "[B]uffer [Y]ank all" })
