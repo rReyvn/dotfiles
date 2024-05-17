@@ -9,18 +9,8 @@ return {
 			autosave_last_session = false,
 		})
 
-		vim.keymap.set(
-			"n",
-			"<leader>Sa",
-			":SessionManager available_commands<CR>",
-			{ desc = "[S]ession [A]vailable commands" }
-		)
-		vim.keymap.set("n", "<leader>Sl", ":SessionManager load_session<CR>", { desc = "[S]ession [L]oad session" })
-		vim.keymap.set(
-			"n",
-			"<leader>Ss",
-			":SessionManager save_current_session<CR>",
-			{ desc = "[S]ession [S]ave Session" }
-		)
+		vim.keymap.set("n", "<Plug>(SessionAvailableCommands)", ":SessionManager available_commands<CR>")
+		vim.keymap.set("n", "<Plug>(SessionLoad)", ":SessionManager load_session<CR>")
+		vim.keymap.set("n", "<Plug>(SessionSave)", ":SessionManager save_current_session<CR>")
 	end,
 }

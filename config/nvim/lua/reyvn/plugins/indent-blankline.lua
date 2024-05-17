@@ -3,9 +3,8 @@ return {
 	main = "ibl",
 	keys = {
 		{
-			"<leader>ti",
+			"<Plug>(IBLToggle)",
 			":IBLToggle<CR>",
-			desc = "[T]oggle [I]ndent Blankline",
 		},
 	},
 	config = function()

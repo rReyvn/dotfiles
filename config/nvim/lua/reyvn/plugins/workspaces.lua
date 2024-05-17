@@ -12,10 +12,8 @@ return {
 	},
 	keys = {
 		{
-			"<leader>wl",
+			"<Plug>(ProjectWorkspaces)",
 			":Telescope workspaces<CR>",
-			desc = "[W]orkspaces [L]ist",
-			silent = true,
 		},
 	},
 	config = function()

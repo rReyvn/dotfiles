@@ -4,11 +4,10 @@ return {
 	cmd = { "ConformInfo" },
 	keys = {
 		{
-			"<leader>bf",
+			"<Plug>(BufferFormat)",
 			function()
 				require("conform").format({ async = true, lsp_fallback = true })
 			end,
-			desc = "Format buffer",
 		},
 	},
 	opts = {

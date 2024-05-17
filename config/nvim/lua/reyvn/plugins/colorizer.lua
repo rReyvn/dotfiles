@@ -2,9 +2,8 @@ return {
 	"NvChad/nvim-colorizer.lua",
 	keys = {
 		{
-			"<leader>tc",
+			"<Plug>(ColorizerToggle)",
 			":ColorizerToggle<CR>",
-			desc = "[T]oggle [C]olorizer",
 		},
 	},
 	config = function()

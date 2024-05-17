@@ -7,27 +7,20 @@ return {
 	cmd = "Grapple",
 	keys = {
 		{
-			"<tab>t",
+			"<Plug>(GrappleTag)",
 			":Grapple toggle<cr>",
-			desc = "Grapple toggle tag",
 		},
 		{
-			"<tab><tab>",
+			"<Plug>(GrappleOpenTag)",
 			":Grapple toggle_tags<cr>",
-			desc = "Grapple open tags window",
-			silent = true,
 		},
 		{
-			"<tab>h",
+			"<Plug>(GrappleNextTag)",
 			":Grapple cycle_tags next<cr>",
-			desc = "Grapple cycle next tag",
-			silent = true,
 		},
 		{
-			"<tab>l",
+			"<Plug>(GrapplePreviousTag)",
 			":Grapple cycle_tags prev<cr>",
-			desc = "Grapple cycle previous tag",
-			silent = true,
 		},
 	},
 }
