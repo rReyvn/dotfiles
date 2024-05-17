@@ -5,4 +5,7 @@ return {
 	-- 	"j-hui/fidget.nvim",
 	-- 	opts = {},
 	-- },
+	--
+	-- nvim-dap (https://github.com/mfussenegger/nvim-dap)
+	-- todo (https://github.com/folke/todo-comments.nvim)
 }

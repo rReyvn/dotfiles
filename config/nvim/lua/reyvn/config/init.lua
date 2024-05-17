@@ -1,4 +1,4 @@
-local list = "reyvn.core."
+local list = "reyvn.config."
 
 require(list .. "option")
 
