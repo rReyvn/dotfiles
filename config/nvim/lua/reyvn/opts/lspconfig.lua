@@ -8,13 +8,10 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		map("<Plug>(LSPReferences)", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
 		map("<Plug>(LSPImplementations)", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
 		map("<Plug>(LSPDeclaration)", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-		map("<Plug>(LSPHover)", vim.lsp.buf.hover, "Hover Documentation")
 		map("<Plug>(LSPTypeDefinitions)", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
 		map("<Plug>(LSPDocumentSymbols)", require("telescope.builtin").lsp_document_symbols, "[D]ocument [S]ymbols")
 		map("<Plug>(LSPRename)", vim.lsp.buf.rename, "[R]e[n]ame")
 		map("<Plug>(LSPCodeAction)", vim.lsp.buf.code_action, "[C]ode [A]ction")
-		map("<Plug>(LSPDiagnosticPrev)", vim.diagnostic.goto_prev, "Previous Diagnostic")
-		map("<Plug>(LSPDiagnosticNext)", vim.diagnostic.goto_next, "Next Diagnostic")
 		map(
 			"<Plug>(LSPWorkspaceSymbols)",
 			require("telescope.builtin").lsp_dynamic_workspace_symbols,

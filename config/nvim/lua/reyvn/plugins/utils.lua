@@ -122,10 +122,4 @@ return {
 			require("reyvn.opts.utils.gitsigns")
 		end,
 	},
-	-- Would be removed after migrating to 0.10
-	{
-		"numToStr/Comment.nvim",
-		event = { "BufReadPre", "BufNewFile" },
-		opts = {},
-	},
 }
