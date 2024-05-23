@@ -25,6 +25,7 @@
     > For Reyvn, save ssh key as id_ed25519_reyvn
     ```sh
     ssh-keygen -t ed25519 -C <EMAIL_STRING>
+    eval `ssh-agent -s`
     ssh-add .ssh/id_ed25519_reyvn
     ```
 - Setup SSH Key to Github
