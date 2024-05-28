@@ -1,0 +1,111 @@
+{
+  "layer": "top",
+    "position": "top",
+    "height": 28, "spacing": 4,
+
+    "modules-left": ["hyprland/workspaces", "idle_inhibitor", "cpu", "memory", "temperature"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["hyprland/submap", "battery", "network", "bluetooth", "pulseaudio", "tray", "clock"],
+
+    "hyprland/workspaces": {
+      "disable-scroll": true,
+      "format": "{name}",
+      "on-scroll-up": "hyprctl dispatch workspace m-1 > /dev/null",
+      "on-scroll-down": "hyprctl dispatch workspace m+1 > /dev/null",
+      "on-click": "activate",
+    },
+    "hyprland/window": {
+      "max-length": 50,
+      "separate-outputs": true
+    },
+    "hyprland/language": {
+      "format": "{}",
+      "max-length": 18
+    },
+    "hyprland/submap": {
+      "format": "<span style=\"italic\">{}</span>"
+    },
+    "idle_inhibitor": {
+      "format": "{icon}",
+      "format-icons": {
+        "activated": "",
+        "deactivated": ""
+      }
+    },
+    "tray": {
+      "spacing": 0
+    },
+    "clock": {
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+      "format": "{usage}% ",
+      "tooltip": false
+    },
+    "memory": {
+      "format": "{}% "
+    },
+    "temperature": {
+      "critical-threshold": 80,
+      "format": "{temperatureC}°C ",
+    },
+    "battery": {
+      "states": {
+        "good": 95,
+        "warning": 30,
+        "critical": 15
+      },
+      "format": "{capacity}% {icon}",
+      "format-charging": "{capacity}% 🗲",
+      "format-plugged": "{capacity}% ",
+      "format-alt": "{time} {icon}",
+      "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+      "bat": "BAT2"
+    },
+    "network": {
+      "format": "󰖩",
+      "format-wifi": "󰖩",
+      "format-ethernet": "",
+      "format-disconnected": "󰖪",
+      "format-disabled": "󱚼",
+      "tooltip-format": "{ifname}",
+      "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+      "tooltip-format-ethernet": "{ifname}",
+      "tooltip-format-disconnected": "Disconnected",
+      "on-click": "nm-connection-editor"
+    },
+    "bluetooth": {
+      "format": "",
+      "format-on": "",
+      "format-disabled": "󰂲",
+      "format-connected": "{device_alias} 󰂱",
+      "format-connected-battery": "{device_battery_percentage}% 󰂱",
+      "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+      "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+      "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+      "on-click": "blueberry"
+    },
+    "pulseaudio": {
+      "format": "{volume}%{icon} {format_source}",
+      "format-bluetooth": "{volume}% {icon}󰂰 {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": " {format_source}",
+      "format-source": "{volume}%  ",
+      "format-source-muted": " ",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      },
+      "on-click": "pavucontrol"
+    },
+}
+
