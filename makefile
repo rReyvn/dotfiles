@@ -1,5 +1,13 @@
-all:
-	stow --verbose --target=$$HOME/.config/ --restow config
+rice:
+	stow --verbose --target=$$HOME/.config/ --restow term
+	stow --verbose --target=$$HOME/.config/ --restow wm
 
-delete:
-	stow --verbose --target=$$HOME/.config/ --delete config
+rice-term:
+	stow --verbose --target=$$HOME/.config/ --restow term
+
+unrice-term:
+	stow --verbose --target=$$HOME/.config/ --delete term
+	
+unrice:
+	stow --verbose --target=$$HOME/.config/ --delete term
+	stow --verbose --target=$$HOME/.config/ --delete wm
