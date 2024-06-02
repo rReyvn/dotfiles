@@ -19,9 +19,9 @@
 
 [urgency_normal]
   background = "#1d2021"
-  foreground = "#d4be98"
-  frame_color = "#a9b665"
-  timeout = 10
+  foreground = "#ddc7a1"
+  frame_color = "#ddc7a1"
+  timeout = 8
 
 [urgency_critical]
   background = "#3c1f1e"

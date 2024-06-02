@@ -46,6 +46,11 @@
         ```makefile
         make unrice
         ```
+- Apps
+    ``` yay -S brave-bin visual-studio-code-bin obsidian discord  --needed ```
+
+- Utilities
+    ``` yay -S syncthing docker distrobox --needed ```
 
 - Flatpak
     ```
@@ -54,10 +59,17 @@
     ```
 
 - Misc
+    - Wifi driver fix
+        ``` yay -S rtl8821ce-dkms-git --needed ```
     - Sync dual-boot bluetooth devices
         ```
         yay -S python-pipx --needed
         pipx install bt-dualboot
+        ```
+    - Fonts
+        ```
+        yay -S inter-font ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common ttf-ms-fonts
+        ttf-nerd-fonts-symbols-mono ttf-font-awesome otf-font-awesome --needed
         ```
     - [Nerd Fonts](https://www.nerdfonts.com/font-downloads) - JetBrainsMono Nerd Font
     - [Bibata-cursor](https://www.bibata.live/studio)
