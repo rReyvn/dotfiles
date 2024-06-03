@@ -47,7 +47,7 @@
         make unrice
         ```
 - Apps
-    ``` yay -S brave-bin visual-studio-code-bin obsidian discord  --needed ```
+    ``` yay -S brave-bin visual-studio-code-bin obsidian discord cmus --needed ```
 
 - Utilities
     ``` yay -S syncthing docker distrobox --needed ```

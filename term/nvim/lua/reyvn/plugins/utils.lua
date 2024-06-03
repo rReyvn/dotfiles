@@ -122,4 +122,9 @@ return {
 			require("reyvn.opts.utils.gitsigns")
 		end,
 	},
+	{
+		"echasnovski/mini.comment",
+		version = "*",
+		opts = {},
+	},
 }

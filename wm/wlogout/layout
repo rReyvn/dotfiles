@@ -1,6 +1,6 @@
 {
     "label" : "shutdown",
-    "action" : "$HOME/.config/hypr/scripts/power.sh lock",
+    "action" : "$HOME/.config/hypr/scripts/power.sh shutdown",
     "text" : "Shutdown",
     "keybind" : "s"
 }
