@@ -114,8 +114,8 @@ case $1 in
     ;;
 
     play_pause)
+    # Pauses/resumes playback and displays the notification
     playerctl play-pause
     show_music_notif
-    # Pauses/resumes playback and displays the notification
     ;;
 esac

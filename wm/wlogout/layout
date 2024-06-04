@@ -1,36 +1,36 @@
 {
     "label" : "shutdown",
-    "action" : "$HOME/.local/bin/hypr_power shutdown",
+    "action" : "$HOME/.local/bin/wm_power shutdown",
     "text" : "Shutdown",
     "keybind" : "s"
 }
 {
     "label" : "hibernate",
-    "action" : "$HOME/.local/bin/hypr_power hibernate",
+    "action" : "$HOME/.local/bin/wm_power hibernate",
     "text" : "Hibernate",
     "keybind" : "h"
 }
 {
     "label" : "reboot",
-    "action" : "$HOME/.local/bin/hypr_power reboot",
+    "action" : "$HOME/.local/bin/wm_power reboot",
     "text" : "Reboot",
     "keybind" : "r"
 }
 {
     "label" : "suspend",
-    "action" : "$HOME/.local/bin/hypr_power suspend",
+    "action" : "$HOME/.local/bin/wm_power suspend",
     "text" : "Suspend",
     "keybind" : "u"
 }
 {
     "label" : "lock",
-    "action" : "$HOME/.local/bin/hypr_power lock",
+    "action" : "$HOME/.local/bin/wm_power lock",
     "text" : "Lock",
     "keybind" : "l"
 }
 {
     "label" : "logout",
-    "action" : "$HOME/.local/bin/hypr_power exit",
+    "action" : "$HOME/.local/bin/wm_power exit",
     "text" : "Logout",
     "keybind" : "e"
 }

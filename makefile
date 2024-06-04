@@ -15,3 +15,7 @@ unrice-term:
 rice-wm:
 	stow --verbose --target=$$HOME/.config/ --restow wm
 	stow --verbose --target=$$HOME/.local/bin/ --restow scripts
+	
+unrice-wm:
+	stow --verbose --target=$$HOME/.config/ --delete wm
+	stow --verbose --target=$$HOME/.local/bin/ --delete scripts
