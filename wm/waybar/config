@@ -28,8 +28,8 @@
     "idle_inhibitor": {
       "format": "{icon}",
       "format-icons": {
-        "activated": "",
-        "deactivated": ""
+        "activated": " ",
+        "deactivated": " "
       }
     },
     "tray": {
@@ -57,8 +57,8 @@
         "critical": 15
       },
       "format": "{capacity}% {icon}",
-      "format-charging": "{capacity}% 🗲",
-      "format-plugged": "{capacity}% ",
+      "format-charging": "{capacity}% 🗲 ",
+      "format-plugged": "{capacity}%  ",
       "format-alt": "{time} {icon}",
       "format-icons": ["", "", "", "", ""]
     },
@@ -75,7 +75,8 @@
       "tooltip-format-wifi": "{essid} ({signalStrength}%)",
       "tooltip-format-ethernet": "{ifname}",
       "tooltip-format-disconnected": "Disconnected",
-      "on-click": "kitty nmtui"
+      "on-click": "rfkill toggle wifi",
+      "on-click-right": "kitty nmtui"
     },
     "bluetooth": {
       "format": "",
@@ -95,7 +96,7 @@
       "format-bluetooth": "{volume}% {icon}󰂰 {format_source}",
       "format-bluetooth-muted": " {icon} {format_source}",
       "format-muted": " {format_source}",
-      "format-source": "{volume}%  ",
+      "format-source": "{volume}% ",
       "format-source-muted": " ",
       "format-icons": {
         "headphone": "",

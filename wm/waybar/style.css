@@ -23,7 +23,7 @@
 }
 
 #waybar {
-  font-family: "Inter Display Medium", sans-serif;
+  font-family: "JetBrainsMono Nerd Font", sans-serif;
   font-size: 1em;
   font-weight: 400;
   color: @base08;
