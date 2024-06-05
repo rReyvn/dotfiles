@@ -4,7 +4,7 @@
 ```
 yay -S hyprland hyprpaper hyprcursor hypridle hyprlock hyprpicker xdg-desktop-portal-hyprland waybar wofi dunst \
 qt6ct-kde grim slurp playerctl light wev nwg-look cliphist wlogout archlinux-xdg-menu \
-git ntfs-3g qt5-wayland qt6-wayland xwaylandvideobridge --needed
+git ntfs-3g qt5-wayland qt6-wayland xwaylandvideobridge rofimoji --needed
 ```
 
 ## Package List (Manual Install)

@@ -118,4 +118,8 @@ case $1 in
     playerctl play-pause
     show_music_notif
     ;;
+
+    current_track)
+    show_music_notif
+    ;;
 esac

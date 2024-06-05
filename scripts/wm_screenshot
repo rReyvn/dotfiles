@@ -1,0 +1,32 @@
+#!/bin/env bash
+
+SS_FILE_PATH=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
+SS_DIR=~/Pictures/Screenshots/
+
+take_full_ss() {
+  if [ ! -d "$SS_DIR" ]; then
+    mkdir -p $SS_DIR
+  fi
+  
+  grim -t jpeg $SS_FILE_PATH
+  dunstify -u normal -i NONE "Screenshot saved at $SS_DIR"
+}
+
+take_rect_ss() {
+  area="$(slurp -d)"
+  
+  if [[ -n "$area" ]]; then
+    grim -g "$area" - | wl-copy
+    dunstify -u normal -i NONE "Screenshot copied to clipboard"
+  fi
+}
+
+case $1 in
+    full_screenshot)
+    take_full_ss
+    ;;
+
+    rectangle_screenshot)
+    take_rect_ss
+    ;;
+esac

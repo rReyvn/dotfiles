@@ -29,6 +29,10 @@ button:focus {
   border-color: #928374;
 }
 
+button:focus {
+  outline: none;
+}
+
 button:active {
   color: #d4be98;
   background-color: #282828;
