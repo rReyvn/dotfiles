@@ -1,35 +1,59 @@
+#!/usr/bin/env bash
+
 if [[ "$1" == "exit" ]]; then
-    echo ":: Exit"
-    sleep 0.5
-    killall -9 Hyprland sleep 2
+  echo ":: Exit"
+  sleep 0.5
+  killall -9 Hyprland sleep 2
 fi
 
 if [[ "$1" == "lock" ]]; then
-    echo ":: Lock"
-    sleep 0.5
-    hyprlock    
+  echo ":: Lock"
+  sleep 0.5
+  hyprlock    
 fi
 
 if [[ "$1" == "reboot" ]]; then
-    echo ":: Reboot"
-    sleep 0.5
-    systemctl reboot
+  echo ":: Reboot"
+  sleep 0.5
+  systemctl reboot
 fi
 
 if [[ "$1" == "shutdown" ]]; then
-    echo ":: Shutdown"
-    sleep 0.5
-    systemctl poweroff
+  echo ":: Shutdown"
+  sleep 0.5
+  systemctl poweroff
 fi
 
 if [[ "$1" == "suspend" ]]; then
-    echo ":: Suspend"
-    sleep 0.5
-    systemctl suspend    
+  echo ":: Suspend"
+  sleep 0.5
+  systemctl suspend    
 fi
 
 if [[ "$1" == "hibernate" ]]; then
-    echo ":: Hibernate"
-    sleep 1; 
-    systemctl hibernate    
+  echo ":: Hibernate"
+  sleep 1; 
+  systemctl hibernate    
+fi
+
+if [[ "$1" == "dim_light" ]]; then
+  echo ":: Dim out screen"
+
+  if [ ! -f "$SS_DIR" ]; then
+    touch ~/.cache/light-value
+  fi
+  
+  sudo light -G > ~/.cache/light-value
+  sudo light -S 0
+fi
+
+if [[ "$1" == "setback_light" ]]; then
+  echo ":: Set light back to previous value"
+  
+  if [ ! -f "$SS_DIR" ]; then
+    touch ~/.cache/light-value
+  fi
+  
+  value=$(cat ~/.cache/light-value)
+  sudo light -S $value
 fi
