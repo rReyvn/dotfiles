@@ -1,7 +1,10 @@
 -- Yank Remap
-vim.keymap.set("n", "<leader>by", ":%y+<CR>", { desc = "[B]uffer [Y]ank all" })
--- vim.keymap.set({ "n", "v" }, "<leader>bc", '"+y', { desc = "Yank to system clipboard" })
--- vim.keymap.set("n", "<leader>bY", '"+Y', { desc = "Yank line to system clipboard" })
+vim.keymap.set("n", "<leader>ya", ":%y+<CR>", { desc = "[Y]ank [A]ll" })
+vim.keymap.set({ "n", "v" }, "<leader>yc", '"+y', { desc = "[Y]ank to system [C]lipboard" })
+vim.keymap.set("n", "<leader>Y", '"+Y', { desc = "Yank line to system clipboard" })
+
+-- Paste from system clipboard
+vim.keymap.set({ "n", "v" }, "<leader>p", '"+p', { desc = "Paste from system clipboard" })
 
 -- Don't yank replaced text
 vim.keymap.set("x", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', { silent = true })
