@@ -19,3 +19,6 @@ rice-wm:
 unrice-wm:
 	stow --verbose --target=$$HOME/.config/ --delete wm
 	stow --verbose --target=$$HOME/.local/bin/ --delete scripts
+
+sprinkle-scripts:
+	stow --verbose --target=$$HOME/.local/bin/ --restow scripts

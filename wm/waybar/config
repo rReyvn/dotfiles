@@ -1,7 +1,7 @@
 {
   "layer": "top",
     "position": "top",
-    "height": 28, "spacing": 4,
+    "height": 34, "spacing": 4,
 
     "modules-left": ["hyprland/workspaces", "idle_inhibitor", "cpu", "memory", "temperature"],
     "modules-center": ["hyprland/window"],
@@ -18,12 +18,8 @@
       "max-length": 50,
       "separate-outputs": true
     },
-    "hyprland/language": {
-      "format": "{}",
-      "max-length": 18
-    },
     "hyprland/submap": {
-      "format": "<span style=\"italic\">{}</span>"
+      "format": "{}"
     },
     "idle_inhibitor": {
       "format": "{icon}",
@@ -33,7 +29,7 @@
       }
     },
     "tray": {
-      "spacing": 0
+      "spacing": 8,
     },
     "clock": {
       "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",

@@ -78,7 +78,7 @@ case $1 in
     ;;
 
     volume_down)
-    # Raises volume and displays the notification
+    # Decrease volume and displays the notification
     pactl set-sink-volume @DEFAULT_SINK@ -$volume_step%
     show_volume_notif
     ;;
@@ -120,6 +120,7 @@ case $1 in
     ;;
 
     current_track)
+    # Show current song on notification
     show_music_notif
     ;;
 esac
