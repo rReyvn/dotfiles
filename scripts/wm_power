@@ -38,22 +38,13 @@ fi
 
 if [[ "$1" == "dim_light" ]]; then
   echo ":: Dim out screen"
-
-  if [ ! -f "$SS_DIR" ]; then
-    touch ~/.cache/light-value
-  fi
   
-  sudo light -G > ~/.cache/light-value
-  sudo light -S 0
+  brightnessctl --save
+  brightnessctl set 0
 fi
 
 if [[ "$1" == "setback_light" ]]; then
   echo ":: Set light back to previous value"
   
-  if [ ! -f "$SS_DIR" ]; then
-    touch ~/.cache/light-value
-  fi
-  
-  value=$(cat ~/.cache/light-value)
-  sudo light -S $value
+  brightnessctl --restore
 fi
