@@ -9,7 +9,7 @@ fi
 if [[ "$1" == "lock" ]]; then
   echo ":: Lock"
   sleep 0.5
-  hyprlock    
+  hyprlock
 fi
 
 if [[ "$1" == "reboot" ]]; then
@@ -27,24 +27,24 @@ fi
 if [[ "$1" == "suspend" ]]; then
   echo ":: Suspend"
   sleep 0.5
-  systemctl suspend    
+  systemctl suspend
 fi
 
 if [[ "$1" == "hibernate" ]]; then
   echo ":: Hibernate"
-  sleep 1; 
-  systemctl hibernate    
+  sleep 1
+  systemctl hibernate
 fi
 
 if [[ "$1" == "dim_light" ]]; then
   echo ":: Dim out screen"
-  
+
   brightnessctl --save
   brightnessctl set 0
 fi
 
 if [[ "$1" == "setback_light" ]]; then
   echo ":: Set light back to previous value"
-  
+
   brightnessctl --restore
 fi

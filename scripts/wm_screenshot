@@ -7,14 +7,14 @@ take_full_ss() {
   if [ ! -d "$SS_DIR" ]; then
     mkdir -p $SS_DIR
   fi
-  
+
   grim -t jpeg $SS_FILE_PATH
   dunstify -u normal -i NONE "Screenshot" "Saved at $SS_DIR"
 }
 
 take_rect_ss() {
   area="$(slurp -d)"
-  
+
   if [[ -n "$area" ]]; then
     grim -g "$area" - | wl-copy
     dunstify -u normal -i NONE "Screenshot" "Copied to clipboard"
@@ -28,15 +28,15 @@ take_color_pick() {
 }
 
 case $1 in
-    full_screenshot)
-    take_full_ss
-    ;;
+full_screenshot)
+  take_full_ss
+  ;;
 
-    rectangle_screenshot)
-    take_rect_ss
-    ;;
+rectangle_screenshot)
+  take_rect_ss
+  ;;
 
-    color_pick)
-    take_color_pick
-    ;;
+color_pick)
+  take_color_pick
+  ;;
 esac

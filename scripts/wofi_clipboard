@@ -9,7 +9,7 @@ wofi_show_clipboard() {
 }
 
 case $1 in
-  show)
-    wofi_show_clipboard
-    ;;
+show)
+  wofi_show_clipboard
+  ;;
 esac

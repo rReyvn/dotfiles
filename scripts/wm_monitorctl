@@ -1,22 +1,22 @@
 #!/usr/bin/env bash
 
 case $1 in
-  disable-int)
+disable-int)
   sleep 1
-  hyprctl keyword monitor eDP-1, disable 
+  hyprctl keyword monitor eDP-1, disable
   ;;
-  
-  enable-int)
+
+enable-int)
   sleep 1
   hyprctl keyword monitor eDP-1, preferred, auto, auto
   ;;
-  
-  disable-ext)
+
+disable-ext)
   sleep 1
-  hyprctl keyword monitor HDMI-A-1, disable 
+  hyprctl keyword monitor HDMI-A-1, disable
   ;;
-  
-  enable-ext)
+
+enable-ext)
   sleep 1
   hyprctl keyword monitor HDMI-A-1, preferred, auto, auto
   ;;
