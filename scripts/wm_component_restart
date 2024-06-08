@@ -6,13 +6,11 @@ waybar)
   pkill waybar
   sleep 0.2
   waybar &
-  >/dev/null
   ;;
 dunst)
   killall dunst
   pkill dunst
   sleep 0.2
   dunst &
-  >/dev/null
   ;;
 esac

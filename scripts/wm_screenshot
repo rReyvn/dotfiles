@@ -8,7 +8,7 @@ take_full_ss() {
     mkdir -p $SS_DIR
   fi
 
-  grim -t jpeg $SS_FILE_PATH
+  grim -t jpeg "$SS_FILE_PATH"
   dunstify -u normal -i NONE "Screenshot" "Saved at $SS_DIR"
 }
 

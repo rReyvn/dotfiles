@@ -5,6 +5,7 @@ require("conform").setup({
 		javascript = { { "prettierd", "prettier" } },
 		css = { { "prettierd", "prettier" } },
 		html = { { "prettierd", "prettier" } },
+		markdown = { { "prettierd", "prettier" } },
 		bash = { "shfmt" },
 		-- python = { "isort", "black" },
 		-- blade = { "blade_formatter" },

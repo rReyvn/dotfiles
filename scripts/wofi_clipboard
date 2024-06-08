@@ -4,7 +4,7 @@ wofi_show_clipboard() {
   history="$(cliphist list | wofi --dmenu | cliphist decode)"
 
   if [[ -n "$history" ]]; then
-    echo -n $history | wl-copy
+    echo -n "$history" | wl-copy
   fi
 }
 
