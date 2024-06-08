@@ -22,3 +22,6 @@ unrice-wm:
 
 sprinkle-scripts:
 	stow --verbose --target=$$HOME/.local/bin/ --restow scripts
+
+sprinkle-some:
+	stow --verbose --target=$$HOME/ --restow git

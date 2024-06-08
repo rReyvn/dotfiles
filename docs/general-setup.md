@@ -26,7 +26,7 @@
     ```
 
 - Apps
-  `yay -S brave-bin visual-studio-code-bin obsidian discord cmus --needed`
+  `yay -S brave-bin visual-studio-code-bin obsidian vesktop-bin --needed`
 
 - Utilities
   `yay -S syncthing docker distrobox ncdu --needed`

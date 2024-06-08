@@ -3,21 +3,25 @@
 SS_FILE_PATH=~/Pictures/Screenshots/$(date +%Y-%m-%d_%H-%m-%s).jpg
 SS_DIR=~/Pictures/Screenshots/
 
-take_full_ss() {
+check_dir_exist() {
   if [ ! -d "$SS_DIR" ]; then
     mkdir -p $SS_DIR
   fi
+}
 
-  grim -t jpeg "$SS_FILE_PATH"
+notify_ss_taken() {
   dunstify -u normal -i NONE "Screenshot" "Saved at $SS_DIR"
+}
+
+take_full_ss() {
+  grim -t jpeg "$SS_FILE_PATH" && grim - | wl-copy
 }
 
 take_rect_ss() {
   area="$(slurp -d)"
 
   if [[ -n "$area" ]]; then
-    grim -g "$area" - | wl-copy
-    dunstify -u normal -i NONE "Screenshot" "Copied to clipboard"
+    grim -g "$area" -t jpeg "$SS_FILE_PATH" && grim -g "$area" - | wl-copy
   fi
 }
 
@@ -29,11 +33,15 @@ take_color_pick() {
 
 case $1 in
 full_screenshot)
+  check_dir_exist
   take_full_ss
+  notify_ss_taken
   ;;
 
 rectangle_screenshot)
+  check_dir_exist
   take_rect_ss
+  notify_ss_taken
   ;;
 
 color_pick)

@@ -20,7 +20,7 @@
 
 ```
 yay -S hyprland hyprpaper hyprcursor hypridle hyprlock hyprpicker xdg-desktop-portal-hyprland waybar wofi dunst \
-grim slurp playerctl brightnessctl wev cliphist wlogout archlinux-xdg-menu git ntfs-3g xwaylandvideobridge rofimoji \
+grim slurp playerctl brightnessctl wev cliphist wlogout archlinux-xdg-menu git ntfs-3g rofimoji \
 nwg-look adw-gtk-theme nautilus loupe file-roller gnome-keyring polkit-gnome gnome-tweaks papirus-icon-theme --needed
 ```
 
