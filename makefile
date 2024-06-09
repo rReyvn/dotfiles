@@ -1,10 +1,14 @@
 rice:
 	stow --verbose --target=$$HOME/.config/ --restow term
 	stow --verbose --target=$$HOME/.config/ --restow wm
+	stow --verbose --target=$$HOME/.local/bin/ --restow scripts
+	stow --verbose --target=$$HOME/ --restow extras
 
 unrice:
 	stow --verbose --target=$$HOME/.config/ --delete term
 	stow --verbose --target=$$HOME/.config/ --delete wm
+	stow --verbose --target=$$HOME/.local/bin/ --delete scripts
+	stow --verbose --target=$$HOME/ --delete extras
 	
 rice-term:
 	stow --verbose --target=$$HOME/.config/ --restow term
@@ -23,5 +27,5 @@ unrice-wm:
 sprinkle-scripts:
 	stow --verbose --target=$$HOME/.local/bin/ --restow scripts
 
-sprinkle-some:
-	stow --verbose --target=$$HOME/ --restow git
+sprinkle-extras:
+	stow --verbose --target=$$HOME/ --restow extras
