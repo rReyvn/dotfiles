@@ -35,3 +35,7 @@ vim.opt.undofile = true
 vim.opt.undolevels = 10000
 vim.opt.updatetime = 250
 vim.opt.wrap = false
+
+if vim.g.neovide then
+	vim.o.guifont = "JetBrainsMono Nerd Font:h10"
+end

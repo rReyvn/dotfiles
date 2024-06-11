@@ -6,7 +6,7 @@
     ```sh
     ssh-keygen -t ed25519 -f <ssh_file_name> -C <EMAIL_STRING>
     eval `ssh-agent -s`
-    ssh-add .ssh/id_ed25519_reyvn
+    ssh-add .ssh/<ssh_file_name_alt_account>
     ```
   - Setup SSH Key to Github
   - Create ssh config file (Default: ~/.ssh/config)
@@ -26,7 +26,7 @@
     ```
 
 - Apps
-  `yay -S brave-bin visual-studio-code-bin obsidian vesktop-bin --needed`
+  `yay -S brave-bin visual-studio-code-bin obsidian vesktop-bin neovide --needed`
 
 - Utilities
   `yay -S syncthing docker distrobox ncdu --needed`
@@ -49,10 +49,9 @@
     ```
   - Fonts
     ```
-    yay -S inter-font ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common ttf-ms-fonts
-    ttf-nerd-fonts-symbols-mono ttf-font-awesome otf-font-awesome --needed
+    yay -S inter-font ttf-nerd-fonts-symbols ttf-nerd-fonts-symbols-common ttf-ms-fonts \
+    ttf-nerd-fonts-symbols-mono ttf-font-awesome otf-font-awesome ttf-jetbrains-mono-nerd --needed
     ```
-  - [Nerd Fonts](https://www.nerdfonts.com/font-downloads) - JetBrainsMono Nerd Font
   - [Bibata-cursor](https://www.bibata.live/studio)
   - Mount HDD
 
@@ -64,8 +63,13 @@
     ```
 
   - Environtment Variables
-    ```sh
+    ```
     # Add this to /etc/environment
     EDITOR=nvim
     TERMINAL=kitty
+    ```
+  - Silent Boot
+    ```
+    # Add this to kernel parameter
+    quiet loglevel=3 systemd.show_status=auto rd.udev.log_level=3
     ```

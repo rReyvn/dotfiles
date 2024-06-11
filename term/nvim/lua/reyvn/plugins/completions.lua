@@ -1,6 +1,6 @@
 return {
 	"hrsh7th/nvim-cmp",
-	event = "InsertEnter",
+	event = { "InsertEnter", "CmdlineEnter" },
 	dependencies = {
 		-- Snippet Engine & its associated nvim-cmp source
 		{
@@ -20,6 +20,8 @@ return {
 		-- Adds other completion capabilities.
 		"hrsh7th/cmp-nvim-lsp",
 		"hrsh7th/cmp-path",
+		"hrsh7th/cmp-buffer",
+		"hrsh7th/cmp-cmdline",
 
 		"rafamadriz/friendly-snippets",
 	},
