@@ -29,7 +29,7 @@
   `yay -S brave-bin visual-studio-code-bin obsidian vesktop-bin neovide --needed`
 
 - Utilities
-  `yay -S syncthing docker distrobox ncdu --needed`
+  `yay -S syncthing docker docker-rootless-extras docker-compose distrobox ncdu --needed`
 
 - Flatpak Setup
 
@@ -63,11 +63,17 @@
     ```
 
   - Environtment Variables
+
     ```
     # Add this to /etc/environment
-    EDITOR=nvim
-    TERMINAL=kitty
+    BROWSER=/usr/bin/firefox
+    EDITOR=/usr/bin/nvim
+    TERMINAL=/usr/bin/kitty
+
+    # Only if using docker-rootless
+    DOCKER_HOST=unix:///run/user/1000/docker.sock
     ```
+
   - Silent Boot
     ```
     # Add this to kernel parameter

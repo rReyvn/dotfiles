@@ -73,7 +73,7 @@
       "tooltip-format-disconnected": "Disconnected",
       "tooltip-format-disabled": "Disabled",
       "on-click": "rfkill toggle wifi",
-      "on-click-right": "kitty nmtui"
+      "on-click-right": "kitty -e nmtui"
     },
     "bluetooth": {
       "format": "",
@@ -86,7 +86,7 @@
       "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
       "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
       "on-click": "rfkill toggle bluetooth",
-      "on-click-right": "kitty bluetoothctl"
+      "on-click-right": "kitty -e bluetoothctl"
     },
     "pulseaudio": {
       "format": "{volume}%{icon} {format_source}",

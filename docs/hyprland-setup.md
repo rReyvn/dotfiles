@@ -1,13 +1,7 @@
 # Hyprland Setup
 
-## Login Setup
+## Login Configuration
 
-- Put this on bash_profile
-  ```
-  if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
-    exec Hyprland
-  fi
-  ```
 - Fill in username automatically and only prompt password to login
   /etc/systemd/system/getty@tty1.service.d/skip-username.conf
   ```
@@ -20,18 +14,13 @@
 
 ```
 yay -S hyprland hyprpaper hyprcursor hypridle hyprlock hyprpicker xdg-desktop-portal-hyprland waybar wofi dunst \
-grim slurp playerctl brightnessctl xorg-xev wev cliphist wlogout git ntfs-3g rofimoji \
+grim slurp playerctl brightnessctl xorg-xev wev cliphist wlogout git ntfs-3g rofimoji mpv yt-dlp \
 nwg-look adw-gtk-theme nautilus loupe file-roller gnome-keyring polkit-gnome gnome-tweaks papirus-icon-theme \
-gnome-calculator evince xdg-desktop-portal-gtk --needed
+gnome-calculator evince xdg-desktop-portal-gtk \
+qt5-wayland qt6-wayland qt6ct-kde kvantum kvantum-theme-libadwaita-git --needed
 ```
 
-# QT/KDE Apps Support
-
-```
-yay -S qt5-wayland qt6-wayland qt6ct-kde kvantum kvantum-theme-libadwaita-git
-```
-
-# Keyring
+# Keyring Configuration
 
 ```
 # Add this at the end of auth section
