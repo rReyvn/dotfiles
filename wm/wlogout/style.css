@@ -15,17 +15,21 @@ button {
   border-style: solid;
   border-width: 2px;
   border-radius: 10px;
-  border-color: #a89984;
+  border-color: #32302f;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12%;
   margin: 15px;
 }
 
-button:hover,
+button:hover {
+  color: #d4be98;
+  background-color: #282828;
+}
+
 button:focus {
   color: #d4be98;
-  background-color: #3c3836;
+  background-color: #282828;
   border-color: #928374;
 }
 

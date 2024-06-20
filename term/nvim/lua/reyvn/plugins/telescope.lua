@@ -35,6 +35,12 @@ return {
 					"%.jpg",
 					"%.ico",
 					"%.webp",
+					"%.xlsx",
+					"%.ttf",
+					"%.otf",
+					"%.woff",
+					"%.woff2",
+					"%.eot",
 				},
 			},
 			pickers = {

@@ -3,8 +3,8 @@
 ## Package List
 
 ```
-yay -S stow kitty fish git make zoxide fzf ripgrep fd bat eza wl-clipboard ranger \
-lazygit btop --needed
+yay -S stow kitty fish git make zoxide fzf ripgrep fd bat eza wl-clipboard yazi \
+jq unarchiver lazygit btop --needed
 ```
 
 ## NPM Setup

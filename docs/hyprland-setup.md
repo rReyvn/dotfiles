@@ -17,7 +17,7 @@ yay -S hyprland hyprpaper hyprcursor hypridle hyprlock hyprpicker xdg-desktop-po
 grim wf-recorder slurp playerctl brightnessctl xorg-xev wev cliphist wlogout git ntfs-3g rofimoji mpv yt-dlp \
 nwg-look adw-gtk-theme nautilus loupe file-roller gnome-keyring polkit-gnome gnome-tweaks papirus-icon-theme \
 gnome-calculator evince xdg-desktop-portal-gtk \
-qt5-wayland qt6-wayland qt6ct-kde kvantum kvantum-theme-libadwaita-git --needed
+qt5-wayland qt6-wayland qt6ct qt5ct kvantum-qt5 kvantum kvantum-theme-libadwaita-git --needed
 ```
 
 # Keyring Configuration

@@ -26,7 +26,7 @@
     ```
 
 - Apps
-  `yay -S brave-bin visual-studio-code-bin obsidian vesktop-bin neovide --needed`
+  `yay -S brave-bin visual-studio-code-bin obsidian vesktop-bin neovide prismlauncher-qt5-bin --needed`
 
 - Utilities
   `yay -S syncthing docker docker-rootless-extras docker-compose distrobox ncdu --needed`
