@@ -41,10 +41,12 @@
 - Misc
 
   - Wifi driver fix
-    `yay -S rtl8821ce-dkms-git --needed`
+    `yay -S rtl8821ce-dkms-git`
+  - Soft lock fix
+    `yay -S disable-c6-systemd`
   - Sync dual-boot bluetooth devices
     ```
-    yay -S python-pipx --needed
+    yay -S python-pipx
     pipx install bt-dualboot
     ```
   - Fonts
