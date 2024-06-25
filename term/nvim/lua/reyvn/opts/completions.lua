@@ -23,7 +23,7 @@ cmp.setup({
 		["<C-f>"] = cmp.mapping.scroll_docs(4),
 
 		-- Accept ([y]es) the completion.
-		["<CR>"] = cmp.mapping(function(fallback)
+		["<Tab>"] = cmp.mapping(function(fallback)
 			if cmp.visible() then
 				if luasnip.expandable() then
 					luasnip.expand()
@@ -36,26 +36,6 @@ cmp.setup({
 				fallback()
 			end
 		end),
-
-		["<Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_next_item()
-			elseif luasnip.locally_jumpable(1) then
-				luasnip.jump(1)
-			else
-				fallback()
-			end
-		end, { "i", "s" }),
-
-		["<S-Tab>"] = cmp.mapping(function(fallback)
-			if cmp.visible() then
-				cmp.select_prev_item()
-			elseif luasnip.locally_jumpable(-1) then
-				luasnip.jump(-1)
-			else
-				fallback()
-			end
-		end, { "i", "s" }),
 
 		-- Manually trigger a completion from nvim-cmp.
 		["<C-Space>"] = cmp.mapping.complete({}),
