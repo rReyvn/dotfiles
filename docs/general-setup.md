@@ -77,7 +77,13 @@
     ```
 
   - Silent Boot
+
     ```
     # Add this to kernel parameter
     quiet loglevel=3 systemd.show_status=auto rd.udev.log_level=3
+    ```
+
+  - Change default file manager to nautilus
+    ```
+    xdg-mime default org.gnome.Nautilus.desktop inode/directory
     ```
