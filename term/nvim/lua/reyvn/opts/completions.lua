@@ -66,14 +66,9 @@ cmp.setup.cmdline(":", {
 		["<Tab>"] = {
 			c = function(_)
 				if cmp.visible() then
-					if #cmp.get_entries() == 1 then
-						cmp.confirm({ select = true })
+					if luasnip.expandable() then
+						luasnip.expand()
 					else
-						cmp.select_next_item()
-					end
-				else
-					cmp.complete()
-					if #cmp.get_entries() == 1 then
 						cmp.confirm({ select = true })
 					end
 				end
